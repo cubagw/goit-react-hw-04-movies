@@ -1,0 +1,29 @@
+.navigation {
+  background: linear-gradient(89deg, #a5215e 3%, #ee5586 98%);
+
+  grid-area: header;
+}
+.list {
+  min-width: 320px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+}
+.item:not(:last-child) {
+}
+.link {
+  display: block;
+  padding: 14px 20px;
+  color: #fff;
+}
+.link:focus,
+.link:hover {
+  transition: 0.2s;
+  background: rgba(255, 255, 255, 0.5);
+}
+.link.linkActive {
+  color: #181b22;
+
+  background: rgb(255, 242, 245);
+}
