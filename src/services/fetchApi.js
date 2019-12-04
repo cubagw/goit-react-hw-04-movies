@@ -1,7 +1,19 @@
-export const fetchArticles = (query = '', pageNumber = 1) => {
-  return fetch(
-    `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${query}&page=${pageNumber}&per_page=12&key=14238926-6521d7a6bddf65796939e13e0`,
-  )
-    .then(res => res.json())
-    .then(data => data.hits);
+import axios from 'axios';
+
+const instance = axios.create({
+  baseURL: 'https://api.themoviedb.org/3',
+});
+
+const apiKey = '0a372659e0a2bc92523f188eb5e16ad2';
+
+export const homeAPI = {
+  getTrendingToday() {
+    return instance
+      .get(`/trending/movie/day?api_key=${apiKey}`)
+      .then(res => res.data)
+      .catch(err => {
+        console.log('ERROR homeAPI.getTrendingToday', err);
+        throw err;
+      });
+  },
 };

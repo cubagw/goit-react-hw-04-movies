@@ -1,22 +1,18 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import Navigation from '../Navigation/Navigation';
 
-import HomePage from '../pages/HomePage';
-// import Gallery from '../Gallery/Gallery';
-// import Modal from '../Modal/Modal';
-// import SearchForm from '../SearchForm/SearchForm';
-// import * as fetchApi from '../../services/fetchApi';
-// import styles from './App-module.css';
+import Navigation from '../Navigation/Navigation';
+import routes from '../../routes';
+import HomePage from '../pages/HomePage/HomePage';
+import Movies from '../pages/Movies';
 
 const App = () => (
   <div>
     <Navigation />
     <Switch>
-      <Route exact path="/" component={HomePage} />
-      {/* <Route path="/movies" component={MoviesPage} />
-      <Route path="/contact" component={MovieDetailsPage} /> */}
-      <Redirect to="/" />
+      <Route path={routes.HOME} exect component={HomePage} />
+      <Route path={routes.MOVIES} component={Movies} />
+      <Redirect to={routes.HOME} />
     </Switch>
   </div>
 );

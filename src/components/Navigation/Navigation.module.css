@@ -1,5 +1,5 @@
 .navigation {
-  background: linear-gradient(89deg, #a5215e 3%, #ee5586 98%);
+  background: linear-gradient(89deg, #99c7ca 3%, #70dbbb 98%);
 
   grid-area: header;
 }
@@ -21,6 +21,7 @@
 .link:hover {
   transition: 0.2s;
   background: rgba(255, 255, 255, 0.5);
+  color: #181b22;
 }
 .link.linkActive {
   color: #181b22;
