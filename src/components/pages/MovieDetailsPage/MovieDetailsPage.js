@@ -16,14 +16,6 @@ export default class MovieDetailsPage extends Component {
     this.fetchMovieDetails();
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    const { location } = this.props;
-    if (prevProps.location === location) {
-      return;
-    }
-    this.fetchMovieDetails();
-  }
-
   fetchMovieDetails = () => {
     const { match } = this.props;
     const { movieId } = match.params;
@@ -47,8 +39,13 @@ export default class MovieDetailsPage extends Component {
 
         {movie && (
           <>
+            <h3>{movie.title}</h3>
+            <img
+              src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+              alt="poster"
+            />
             <p>{movie.overview}</p>
-            <p>Movie ID : ${match.params.movieId}</p>
+            <p>Movie ID : {match.params.movieId}</p>
           </>
         )}
       </div>
