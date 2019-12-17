@@ -50,24 +50,6 @@ import routes from '../../../routes';
     // });
   }
 
-  // getFetchingAllMovies = query => {
-  //   const { location, history } = this.props;
-
-  //   moviesAPI
-  //     .getSearchMovies(query)
-  //     .then(data => {
-  //       this.setState({
-  //         allSearchMovies: data.results,
-  //         error: null,
-  //       });
-  //       history.push({
-  //         ...location,
-  //         search: `query=${query}`,
-  //       });
-  //     })
-  //     .catch(error => this.setState({ error }));
-  // };
-
   handleSearch = searchQuery => {
     this.props.history.push({
       ...this.props.location,
@@ -77,6 +59,7 @@ import routes from '../../../routes';
 
   render() {
     const { movies } = this.state;
+    const { location } = this.props;
     return (
       <section>
         <SearchBar onSearch={this.handleSearch} />
@@ -87,6 +70,7 @@ import routes from '../../../routes';
               <Link
                 to={{
                   pathname: `${routes.MOVIES}/${movie.id}`,
+                  state: { from: location },
                 }}
               >
                 {movie.title}

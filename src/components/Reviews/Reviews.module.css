@@ -1,0 +1,9 @@
+.listReviews {
+  margin: 20px;
+}
+.itemReviews:not(:last-child) {
+  margin: 0 0 20px 0;
+}
+.title {
+  margin: 0 0 10px 0;
+}

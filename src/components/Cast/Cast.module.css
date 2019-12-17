@@ -1,0 +1,9 @@
+.listCast {
+}
+.itemCast:not(:last-child) {
+  margin: 0 0 20px 0;
+}
+
+.item_name {
+  font-size: 20px;
+}

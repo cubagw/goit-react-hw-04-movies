@@ -1,7 +1,7 @@
 /* import - node_lodules */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import T from 'prop-types';
+
 import routes from '../../../routes';
 
 /* import - CSS */
@@ -16,10 +16,6 @@ import fetchRequest from '../../../services/fetchRequest';
  * COMPONENT
  */
 class HomePage extends Component {
-  static propTypes = {
-    match: T.shape().isRequired,
-  };
-
   state = {
     moviesTranding: [],
     error: null,
@@ -37,7 +33,6 @@ class HomePage extends Component {
   }
 
   render() {
-    // const { location } = this.props;
     const { moviesTranding, error } = this.state;
 
     return (
