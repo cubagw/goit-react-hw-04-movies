@@ -47,11 +47,15 @@ export default class MovieDetailsPage extends Component {
 
     return (
       <div>
-       {movie && (
-         <div className={styles.container}>
-          <button type="button" onClick={this.onGoBack} className={styles.btnBack}>
-          Go back
-        </button>
+        {movie && (
+          <div className={styles.container}>
+            <button
+              type="button"
+              onClick={this.onGoBack}
+              className={styles.btnBack}
+            >
+              Go back
+            </button>
             <h3>Dateils</h3>
             <img
               src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
@@ -96,7 +100,7 @@ export default class MovieDetailsPage extends Component {
                 component={Reviews}
               />
             </Switch>
-            </div>
+          </div>
         )}
       </div>
     );

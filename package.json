@@ -9,7 +9,7 @@
     "react-content-loader": "^4.3.2",
     "react-dom": "^16.10.2",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0",
+    "react-scripts": "^3.3.0",
     "react-toastify": "^5.4.0",
     "short-id": "0.1.0-1"
   },
@@ -21,7 +21,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://cubagw.github.io/goit-react-hw-04-movies",
   "eslintConfig": {
     "extends": "react-app"
   },
