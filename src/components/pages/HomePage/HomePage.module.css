@@ -1,6 +1,6 @@
 .sectionPage {
   /* grid-area: main; */
-  background: rgb(231, 230, 226);
+  background: rgb(255, 255, 255);
   min-height: calc(100vh - 49px);
 }
 .container {
